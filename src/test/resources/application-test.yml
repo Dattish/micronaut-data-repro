@@ -1,0 +1,7 @@
+datasources:
+  default:
+    url: ${JDBC_URL:`jdbc:postgresql://localhost:5432/postgres`}
+    username: ${JDBC_USERNAME:postgres}
+    password: ${JDBC_PASSWORD:postgres}
+    driverClassName: ${JDBC_DRIVER:org.postgresql.Driver}
+    maximum-pool-size: 10
