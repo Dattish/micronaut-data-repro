@@ -10,6 +10,6 @@ import java.util.UUID;
 
 @JdbcRepository(dialect = Dialect.POSTGRES)
 public interface BookRepository extends CrudRepository<Book, UUID> {
-    @Query("update books set read = true where author = :author returning *")
+    @Query(value = "update books set read = true where author = :author returning *", readOnly = false)
     List<Book> readAllByAuthor(UUID author);
 }
